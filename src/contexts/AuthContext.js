@@ -13,14 +13,14 @@ export function AuthContextProvider(props){
     useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged(user => {
         if(user){
-          const {displayName , photoUrl, uid} = user
+          const {displayName , photoURL, uid} = user
           if(!displayName){
             throw new Error ('Missin information from Google Account.')
           }
         setUser({
           id:uid,
           name:displayName,
-          avatar:photoUrl
+          avatar:photoURL
         })
         }
       })
@@ -35,14 +35,14 @@ export function AuthContextProvider(props){
         const provider = new firebase.auth.GoogleAuthProvider()
         const result = await auth.signInWithPopup(provider)
     if(result.user) {
-      const {displayName , photoUrl, uid} = result.user
+      const {displayName , photoURL, uid} = result.user
       if(!displayName){
         throw new Error ('Missin information from Google Account.')
       }
     setUser({
       id:uid,
       name:displayName,
-      avatar:photoUrl
+      avatar:photoURL
     })
     
     
