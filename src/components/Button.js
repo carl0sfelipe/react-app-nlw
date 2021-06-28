@@ -1,12 +1,13 @@
 import '../styles/button.scss';
 
 
-export function Button(props){
+export function Button({isOutlined = false, ...props}){
     
 
     return(
-        <button className='button' {...props} >
-
+        <button 
+        className={`button ${isOutlined ? 'outlined' : ''}` }
+        {...props} >
         </button>
     )
 }
