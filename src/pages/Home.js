@@ -40,6 +40,12 @@ async function handleJoinRoom(event){
         alert('Room does not exists.')
         return
     }
+
+if(roomRef.val().endedAt){
+    alert('Sala encerrada pelo admin');
+    return;
+}
+
     history.push(`rooms/${roomCode}`)
 
 }
