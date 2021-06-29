@@ -5,7 +5,7 @@ import checkImg from '../images/check.svg'
 import answerImg from '../images/answer.svg'
 
 import { RoomCode } from "../components/RoomCode";
-import {useParams} from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { database } from "../services/firebase";
 //import { AuthContext } from '../contexts/AuthContext'
 //import { /* useContext ,*/  useState} from 'react'
@@ -85,7 +85,7 @@ async function handleHighlightQuestion(questionId){
     <header>
 
         <div className='content'>
-            <img src={logoImg} alt='letmeask'/>
+        <Link className='logo' to={'/'}> <img src={logoImg} alt='letmeask'/></Link>
           <div>
                <RoomCode code={params.id}></RoomCode>
            <Button isOutlined={true} onClick={handleEndRoom} > Encerrar Sala </Button>
