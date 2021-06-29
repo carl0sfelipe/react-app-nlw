@@ -1,5 +1,8 @@
 a{ color:#e2e2e2}
 
+.logo{
+    >img{    max-height: 45px;
+} }
 
 #page-room{
     header{
@@ -12,9 +15,11 @@ a{ color:#e2e2e2}
         display: flex;
         justify-content: space-between;
         align-items: center;
-        > img{
+         > img{
             max-height: 45px;
         }
+
+         
 
         > div{
             display: flex;

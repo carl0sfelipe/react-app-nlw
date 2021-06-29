@@ -79,7 +79,7 @@ export function Room() {
             <header>
 
                 <div className='content'>
-                    <img src={logoImg} alt='letmeask' />
+                   <Link className='logo' to={'/'}><img  src={logoImg} alt='letmeask' /></Link> 
                     <RoomCode code={params.id}></RoomCode>
                 </div>
             </header>
